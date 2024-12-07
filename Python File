@@ -1,0 +1,66 @@
+
+name= input("Enter your name - ")
+roll= int(input("Enter your roll number - "))
+eng = float(input("Enter your English marks - "))
+slname = input("Enter your second language[German, French, Hindi] - ")    
+sl = float(input("Enter your Second Language marks - "))
+mat = float(input("Enter your Mathematics marks - "))
+sci = float(input("Enter your Science marks - "))
+sst = float(input("Enter your Social Science marks - "))
+subname = input("Enter your sixth subject[Computers,Music,Art]")
+sub  = float(input("Enter your sixth subject marks - "))
+total = eng+sl+mat+sci+sst+sub        
+per = total/6
+rep = round(per,2)
+
+def margin():
+    for x in range(1,2):
+        for y in range(1,65):
+            print("=",end="")
+        print()
+
+
+margin()
+print("            CENTRAL BOARD OF SECONDARY EDUCATION                ")
+margin()
+print("       GRADE-X SENIOR SCHOOL EXAMINATION CERTIFICATE 2022       ")
+margin()
+print("       NAME -",name,"                     ROLL NO.-",roll        )
+margin()
+print("       SUBJECT                ||            MARKS               ")
+margin()
+print("       ENGLISH                ||           ",eng,"              ") 
+print("      ",slname,"                ||           ",sl,"              ")
+print("     MATHEMATICS              ||           ",mat,"              ")
+print("       SCIENCE                ||           ",sci,"              ")
+print("    SOCIAL SCIENCE            ||           ",sst,"              ")
+print("     ",subname,"              ||           ",sub,"              ")
+margin()
+print("         TOTAL                ||           ",total,"/ 600       ")
+margin()
+print("      PERCENTAGE              ||           ",rep,"%             ")
+margin()
+def gra():
+    if per>=0 and per<=33:
+        print("                              FAIL")
+    elif per>33 and per<40:
+        print("                              D")
+    elif per>=40 and per<50:
+        print("                              C2")
+    elif per>=50 and per<60:
+        print("                              C1")
+    elif per>=60 and per<70:
+        print("                              B2")
+    elif per>=70 and per<80:
+        print("                              B1")
+    elif per>=80 and per<90:
+        print("                              A2")
+    elif per>=90 and per<=100:
+        print("                              A1")
+    else:
+        print("                              N/A")
+print("                             GRADE       ")
+gra()
+print("================================================================")
+print("================================================================")    
+
